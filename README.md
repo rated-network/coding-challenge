@@ -17,7 +17,7 @@ For more information:
 - Staking on Ethereum: https://ethereum.org/en/staking/
 - A primer on Lido: https://lido.fi/static/Lido:Ethereum-Liquid-Staking.pdf
 
-Reading through all of the above is not essential to complete the exercise, but it will help provide context.
+Digging through whitepapers, specs, GitHub repos, and other resources is essential in this space. It is strongly recommended to click through the links above and dig deeper until some familiarity is achieved.
 
 ## The Exercise
 
@@ -32,18 +32,13 @@ The following components will be a needed:
 Notes:
 - The implementations doesn't have to be real-time. It is fine to just write a script that populates SQLite.
 - Use whichever language or framework you are comfortable with. 
-- Lido runs 120K+ validators. You don't need to fetch all of them. It is fine to fetch a 5K sample.
+- Lido runs 120K+ validators. You don't need to fetch all of them. 
+  - It is fine to fetch a 5K sample.
+  - Compute the top line aggrgated stats based on this sample.
 - Sort validators by effectiveness rating. The implementation should paginate over them.
 - You can use off the shelf components (eg https://react-table.tanstack.com/). The wireframe is indicative.
 
 ## Implementation Helpers
-
-To fetch Lido's top level stats:
-```
-curl -X 'GET' \
-  'https://api.rated.network/v0/eth/operators/Lido/effectiveness?size=1' \
-  -H 'accept: application/json'
-```
 
 To fetch a validator's effectiveness for the last 7 days:
 ```
@@ -66,8 +61,10 @@ const total_ops = await ops.methods.getNodeOperatorsCount().call() // it is 22
   return result
 })
 ```
-or you could use https://github.com/lidofinance/lido-python-sdk.
+or you could use something like https://github.com/lidofinance/lido-python-sdk.
 
 Pubkeys can be resolved to validator indices with a single call to the Beacon node.
+
+Good luck!
 
 
