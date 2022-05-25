@@ -6,9 +6,11 @@
 
 ## Context
 
-[Lido](https://lido.fi) is [Ethereum](https://ethereum.org/en/)’s largest liquid staking protocol.   
-Ether holders deposit their ether to Lido to help secure the Ethereum blockchain, earn staking rewards and use their staked tokens in various DeFi applications.  
-Lido uses that ether to launch validators using a pool of professional operators, those validators earn rewards, Lido and the operators keep a cut and the rest goes back to the depositors.  
+[Lido](https://lido.fi) is [Ethereum](https://ethereum.org/en/)’s largest liquid staking protocol.
+
+Ether holders deposit their Ether (ETH) to Lido to help secure the Ethereum blockchain, earn staking rewards and use their stETH tokens (liquid representations of their staked ETH) in various DeFi applications.
+
+Lido uses that ETH to launch validators using a pool of professional operators, those validators earn rewards, Lido and the operators keep a cut and the rest goes back to the depositors.
 
 For more information:
 - Proof of Stake on Ethereum: https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/
@@ -50,9 +52,9 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
-To find Lido's pubkeys, you either need to call the contract directly using something like [Web3.js](https://web3js.readthedocs.io/en/v1.7.3/getting-started.html):
+To find Lido's pubkeys, you either need to call the contract directly using [Web3.js](https://web3js.readthedocs.io/en/v1.7.3/getting-started.html):
 ```ts
-const w3 = new Web3(new Web3.providers.WebsocketProvider('ws://18.209.27.197:8546'))
+const w3 = new Web3(new Web3.providers.WebsocketProvider('ws://0.0.0.0:8546'))
 const CONTRACT_ADDRESS = '0x55032650b14df07b85bF18A3a3eC8E0Af2e028d5'
 const NODE_OPERATOR_CONTRACT_ABI = [...] // https://github.com/lidofinance/lido-python-sdk/blob/master/lido_sdk/contract/abi/NodeOperatorsRegistry.json
 const ops_contract  = new web3.eth.Contract(NODE_OPERATOR_CONTRACT_ABI, CONTRACT_ADDRESS)
