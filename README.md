@@ -4,9 +4,9 @@
 
 ## The Exercise
 
-The purpose of this exercise is to manipulate a dataset containing Ethereum Mainnet transactions.
+The purpose of this exercise is to manipulate an Ethereum transaction [dataset](https://github.com/rated-network/coding-challenge/blob/main/ethereum_txs.csv) using Python.
 
-The following resources provide the required context:
+The following resources provide the required background:
 
 - [ETH transaction](https://ethereum.org/en/developers/docs/transactions/)
 - [Blockchain Explorer](https://etherscan.io/) 
@@ -16,17 +16,29 @@ The following resources provide the required context:
 
 ## Guidelines
 
-This exercise consists of 4 parts:
+This solution should consist of 4 parts:
 
-1/ Assuming block length is 13 seconds, compute the execution timestamp of each transaction.
+1. Assuming block length is 13 seconds, compute the approximate execution timestamp of each transaction.
+2. Compute the gas cost of each transaction in Gwei (1e-9 ETH).
+3. Using [Etherscan's] API, retrieve the price of ETH at transaction execution time and compute dollar cost of gas used.
+4. Implement an API endpoint in a framework of your choosing that serves the following:
 
-2/ Compute the gas cost of each transaction in Gwei (1e-9 ETH).
+```
+GET /transactions/:hash
 
-3/ Using [Etherscan's] API, retrieve the price of ETH at transaction execution time.
+{
+  "hash": "0xaaaaa",
+  "fromAddress": "0x000000",
+  "toAddress": "0x000001",
+  "blockNumber": 1234,
+  "executedAt": "Jul-04-2022 12:02:24 AM +UTC",
+  "gasUsed": 12345678,
+  "gasCostInDollars": 4.23,
+}
+```
 
-4/ For the final question, extract any KPIs you find interesting out of the gas cost results and comment.  
+The solution should adhere to production-like coding standards and should be delivered in a GitHub repo.
 
-
-As deliverables, we expect you to give the code used to achieve such results, the modified dataset and the graphs.
+Bonus points: `pydantic`, `async/await`, `FastAPI`, `pytest`.
 
 Good luck!
