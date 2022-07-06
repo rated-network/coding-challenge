@@ -1,6 +1,6 @@
 ## Context
 
-[Rated](rated.network) offers a solution to the poor contextualization of validator quality problem. This solution is centered around reputation scores for machines and their operators, starting with the Ethereum Beacon Chain. Rated seeks to embed a large swathe of available information from all layers of a given network, and compress it in an easily legible and generalizable reputation score that can act as an input to human workflows but most importantly, machines (e.g. an API that acts as an input to insurance or derivatives Smart Contracts).
+[Rated](rated.network) offers a solution to the poor contextualization of validator quality. The solution is centered around reputation scores for machines and their operators, starting with the Ethereum Beacon Chain. Rated seeks to embed a large swathe of available information from all layers of a given network, and compress it in an easily legible and generalizable reputation score that can act as an input to human workflows but most importantly, machines (e.g. an API that acts as an input to insurance or derivatives Smart Contracts).
 
 ## The Exercise
 
