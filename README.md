@@ -20,7 +20,7 @@ This solution should consist of 4 parts:
 
 1. Assuming block length is 13 seconds, compute the approximate execution timestamp of each transaction.
 2. Compute the gas cost of each transaction in Gwei (1e-9 ETH).
-3. Using [Etherscan's](https://etherscan.io/apis) API, retrieve the price of ETH at transaction execution time and compute the dollar cost of gas used.
+3. Using [Coingecko's](https://www.coingecko.com/en/api/documentation) API, retrieve the approximate price of ETH at transaction execution time and compute the dollar cost of gas used.
 4. Implement an API endpoint in a framework of your choosing that serves the following:
 
 ```
