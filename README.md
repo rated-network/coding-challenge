@@ -18,12 +18,15 @@ The following resources provide the required background:
 
 This solution should consist of 5 parts:
 
-1. Assuming block length is 13 seconds, compute the approximate execution timestamp of each transaction.
+1. Assuming block length is 12 seconds, compute the approximate execution timestamp of each transaction.
 2. Compute the gas cost of each transaction in Gwei (1e-9 ETH).
 3. Using [Coingecko's](https://www.coingecko.com/en/api/documentation) API, retrieve the approximate price of ETH at transaction execution time and compute the dollar cost of gas used.
 4. Populate a local database with the processed transactions.
-5. Using the database in part 4, implement an API endpoint in a framework of your choosing that serves the following:
+5. Using the database in part 4, implement an API endpoint in a framework of your choosing that serves the following endpoints:
 
+### Transactions API
+
+API endpoint that returns a compact transaction view.
 ```
 GET /transactions/:hash
 
@@ -38,8 +41,24 @@ GET /transactions/:hash
 }
 ```
 
+### Stats API
+
+API endpoint that returns aggregated global transaction stats.
+```
+GET /stats
+
+{
+  "totalTransactionsInDB": 1234,
+  "totalGasUsed": 1234567890,
+  "totalGasCostInDollars": 12345
+}
+
+```
+
 The solution should adhere to production-like coding standards and should be delivered in a GitHub repo.
 
-Bonus points: `pydantic`, `async/await`, `FastAPI`, `pytest`.
+Some bonus points: `pydantic`, `FastAPI`, `pytest`.
+
+A LOT of bonus points: converting the CSV into an event stream and processing that stream.
 
 Good luck!
