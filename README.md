@@ -1,6 +1,8 @@
 ## Context
 
-[Rated](rated.network) offers a solution to the poor contextualization of validator quality. The solution is centered around reputation scores for machines and their operators, starting with the Ethereum Beacon Chain. Rated seeks to embed a large swathe of available information from all layers of a given network, and compress it in an easily legible and generalizable reputation score that can act as an input to human workflows but most importantly, machines (e.g. an API that acts as an input to insurance or derivatives Smart Contracts).
+[Rated](rated.network) offers a solution to the poor contextualization of validator quality. The solution is centered around reputation scores for machines and their operators, starting with the Ethereum Beacon Chain. 
+
+Rated seeks to embed a large swathe of available information from all layers of a given network, and compress it in an easily legible and generalizable reputation score that can act as an input to human workflows but most importantly, machines (e.g. an API that acts as an input to insurance or derivatives Smart Contracts).
 
 ## The Exercise
 
@@ -55,10 +57,18 @@ GET /stats
 
 ```
 
-The solution should adhere to production-like coding standards and should be delivered in a GitHub repo.
+### What are we looking for?
+We place a strong emphasis on delivering exceptional and reliable software. However, it's crucial to acknowledge that our applications will continuously evolve as we expand and refine our product offerings. 
 
-Some bonus points: `pydantic`, `FastAPI`, `pytest`.
+As a result, we prioritize flexibility and adaptability over purely architectural aesthetics. While we value elegant design, our focus remains on building resilient systems that can gracefully accommodate future changes and improvements. 
 
-A LOT of bonus points: converting the CSV into an event stream and processing that stream.
+Therefore, we recommend you to focus on code simplicity, readability and maintainability.
+
+That being said,
+* The solution should adhere to production-like coding standards.
+* Your code must be delivered in a Github repository.
+* Your code should include tests.
+* Nice to have: `pydantic`, `FastAPI`, `pytest`.
+* You will stand out by converting the CSV into an event stream and processing that stream.
 
 Good luck!
