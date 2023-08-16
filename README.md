@@ -14,7 +14,6 @@ The following resources provide the required background:
 - [Blockchain Explorer](https://etherscan.io/) 
 - [Gas fees](https://ethereum.org/en/developers/docs/gas/)
 - [ETH Gas Tracker](https://etherscan.io/gastracker)
-- [ETH units](https://gwei.io/)
 
 ## Guidelines
 
