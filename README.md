@@ -7,5 +7,6 @@ Rated seeks to embed a large swathe of available information from all layers of 
 This repo contains various coding exercises to assess level of competency in different aspects of the problems Rated is trying to solve.
 
 Mainly:
-- `eth`: checks for the ability to interpret specs, implement a simple pipeline and an API endpoint. 
+- `eth`: checks for the ability to interpret specs, implement a simple pipeline and an API endpoint.
+- `sol`: checks for the ability to interpret low level protocol specs, and present the results in a coherent way.
 - `performance`: assesses the ability to implement high performance code in Python.
