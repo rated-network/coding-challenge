@@ -1,5 +1,5 @@
-import random
 import datetime
+import random
 
 random.seed(42)  # Set seed before generating durations
 
@@ -13,11 +13,13 @@ request_paths = ["/api/v1/resource1", "/api/v1/resource2", "/api/v1/resource3", 
 status_codes = [200, 201, 400, 401, 403, 404, 500]
 durations = [random.uniform(0.1, 2.0) for _ in range(num_entries)]
 
+
 # Function to generate random timestamp
 def generate_timestamp():
     start_date = datetime.datetime.now() - datetime.timedelta(days=30)
-    random_seconds = random.randint(0, 30*24*60*60)
+    random_seconds = random.randint(0, 30 * 24 * 60 * 60)
     return start_date + datetime.timedelta(seconds=random_seconds)
+
 
 # Generate log entries
 with open(log_file, "w") as f:
