@@ -9,7 +9,7 @@ Your task is to create a Next.js application that displays cryptocurrency exchan
 
 1. **Setup**:
     - Create a new project using Next.js.
-    - Use any CSS-in-JS solution or CSS framework of your choice for styling. Bonus points for styled components.
+    - Use any CSS framework or CSS-in-JS solution of your choice for styling. Bonus points for CSS modules.
 
 2. **API Integration**:
     - Integrate with the provided API endpoint: `https://api.coingecko.com/api/v3/exchanges`.
@@ -56,4 +56,4 @@ Your task is to create a Next.js application that displays cryptocurrency exchan
 
 Provide a link to the GitHub repository containing your code. Include any instructions needed to run and test your application locally. Bonus points if you deploy the app to a platform like Vercel and provide the live link.
 
-**Good luck!**
+**Good luck!🍬**
